@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: iskedyul_backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/iskedyul?createDatabaseIfNotExist=true
+    username: ${DB_ROOT}
+    password: ${DB_PASSWORD}
