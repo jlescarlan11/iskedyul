@@ -19,7 +19,7 @@ import lombok.AllArgsConstructor;
 @RestController
 @RequestMapping("/api/degree-programs")
 public class DegreeProgramController {
-      private final DegreeProgramService degreeProgramService;
+    private final DegreeProgramService degreeProgramService;
 
     @PostMapping
     public ResponseEntity<DegreeProgramDto> createDegreeProgram(

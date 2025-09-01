@@ -1,35 +1,29 @@
 package com.iskedyul.iskedyul_backend.entities;
 
 import java.time.LocalDate;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
-@Getter
 @Entity
-@Table(name="degree_programs")
-public class DegreeProgram {
+@Getter
+@Setter
+public class Courses {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     
     private String code;
+    
+    private String name;
 
-    private String name;    
+    private Integer units;
 
     @Column(name="created_at", insertable=false, updatable=false)
     private LocalDate createdAt;
-
-    @OneToMany(mappedBy = "degreeProgram")
-    private Set<SemesterLimit> semesterLimits = new LinkedHashSet<>();
 }

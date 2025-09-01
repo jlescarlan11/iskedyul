@@ -5,7 +5,7 @@ import org.mapstruct.Mapper;
 import com.iskedyul.iskedyul_backend.dtos.DegreeProgramDto;
 import com.iskedyul.iskedyul_backend.entities.DegreeProgram;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = { SemesterLimitMapper.class })
 public interface DegreeProgramMapper {
     DegreeProgramDto toDto(DegreeProgram degreeProgram);
 }

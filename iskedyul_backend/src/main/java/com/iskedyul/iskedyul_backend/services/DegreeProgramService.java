@@ -23,8 +23,7 @@ public class DegreeProgramService {
         
         degreeProgram.setName(request.getName());
         degreeProgram.setCode(request.getCode());
-        degreeProgram.setTotalUnitsRequired(request.getTotalUnitsRequired());
-
+        
         degreeProgramRepository.save(degreeProgram);
         
         return degreeProgramMapper.toDto(degreeProgram);
